@@ -3,11 +3,8 @@ class Animal(
     age: Int
 ) {
     init {
-        if (age > 6) {
-            println("${name.uppercase()}")
-        } else if (age > 0 && age <= 6) {
-            println("${name.lowercase()}")
-        }
+        if (age > 6) println("${name.uppercase()}")
+        else if (age in 0..6) println("${name.lowercase()}")
     }
     constructor(name: String): this(name, -1) {
         println("$name")
